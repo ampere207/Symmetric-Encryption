@@ -13,12 +13,12 @@ with open('mykey.key', 'rb') as mykey:
 
 f = Fernet(key)
 
-with open('keylogger.py', 'rb') as original_file:
+with open('file.py', 'rb') as original_file:
 	original = original_file.read()
 	
 encrypted = f.encrypt(original)
 
-with open('enc_keylogger.py', 'wb') as encrypted_file:
+with open('enc_file.py', 'wb') as encrypted_file:
 	encrypted_file.write(encrypted)
 
 
